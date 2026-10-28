@@ -29,7 +29,7 @@
         <!-- Search Bar -->
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Midjourney)..." onkeyup="filterTools()">
+            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Gemini, Midjourney)..." onkeyup="filterTools()">
         </div>
     </section>
 
@@ -46,7 +46,7 @@
     <main class="container" id="tools">
         <div class="tools-grid" id="toolsGrid">
 
-            <!-- Tool 1: ChatGPT (ਇੱਥੇ ਆਪਣਾ ਅਫੀਲੀਏਟ ਲਿੰਕ ਪਾ ਸਕਦੇ ਹੋ) -->
+            <!-- Tool 1: ChatGPT -->
             <div class="tool-card" data-category="writing">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/12222/12222560.png" alt="ChatGPT">
@@ -62,7 +62,23 @@
                 </div>
             </div>
 
-            <!-- Tool 2: Midjourney -->
+            <!-- Tool 2: Google Gemini (ਨਵਾਂ ਜੋੜਿਆ ਗਿਆ) -->
+            <div class="tool-card" data-category="writing">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6134/6134346.png" alt="Google Gemini">
+                    <div>
+                        <h3>Google Gemini</h3>
+                        <span class="badge free">Free / Paid</span>
+                    </div>
+                </div>
+                <p>Google's powerful multimodal AI assistant for reasoning, coding, brainstorming, and real-time data analysis.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Writing</span>
+                    <a href="https://gemini.google.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 3: Midjourney -->
             <div class="tool-card" data-category="image">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/10095/10095393.png" alt="Midjourney">
@@ -78,7 +94,7 @@
                 </div>
             </div>
 
-            <!-- Tool 3: GitHub Copilot -->
+            <!-- Tool 4: GitHub Copilot -->
             <div class="tool-card" data-category="coding">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="GitHub Copilot">
@@ -94,7 +110,56 @@
                 </div>
             </div>
 
-            <!-- Tool 4: Runway Gen-2 -->
+            <!-- Tool 5: Runway Gen-2 -->
             <div class="tool-card" data-category="video">
                 <div class="card-header">
-                    <img src="
+                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="RunwayML">
+                    <div>
+                        <h3>Runway Gen-2</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>Generate realistic videos from text descriptions or transform existing video clips instantly.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Video</span>
+                    <a href="https://runwayml.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AIToolsHub. Built on GitHub Pages.</p>
+    </footer>
+
+    <!-- JavaScript for Live Search & Filter -->
+    <script>
+        function filterTools() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('tool-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function filterCategory(category) {
+            let cards = document.getElementsByClassName('tool-card');
+            let buttons = document.getElementsByClassName('cat-btn');
+
+            for (let btn of buttons) {
+                btn.classList.remove('active');
+            }
+            event.target.classList.add('active');
+
+            for (let i = 0; i < cards.length; i++) {
+                if (category === 'all' || cards[i].getAttribute('data-category')
