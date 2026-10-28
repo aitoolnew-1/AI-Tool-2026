@@ -15,8 +15,9 @@
             <i class="fa-solid fa-robot"></i> <span>AIToolsHub</span>
         </div>
         <nav>
+            <a href="index.html">Home</a>
             <a href="#tools">All Tools</a>
-            <a href="#submit" class="submit-btn">+ Submit AI Tool</a>
+            <a href="submit.html" class="submit-btn">+ Submit AI Tool</a>
         </nav>
     </header>
 
@@ -42,10 +43,10 @@
     </div>
 
     <!-- AI Tools Grid -->
-    <main class="container">
+    <main class="container" id="tools">
         <div class="tools-grid" id="toolsGrid">
 
-            <!-- Tool 1 -->
+            <!-- Tool 1: ChatGPT (ਇੱਥੇ ਆਪਣਾ ਅਫੀਲੀਏਟ ਲਿੰਕ ਪਾ ਸਕਦੇ ਹੋ) -->
             <div class="tool-card" data-category="writing">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/12222/12222560.png" alt="ChatGPT">
@@ -57,12 +58,11 @@
                 <p>Advanced AI chatbot for writing content, answering complex questions, and coding assistance.</p>
                 <div class="card-footer">
                     <span class="category-tag">Writing</span>
-                    <!-- Replace # with your Affiliate/Website Link -->
-                    <a href="https://chatgpt.com" target="_blank" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://chatgpt.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
-            <!-- Tool 2 -->
+            <!-- Tool 2: Midjourney -->
             <div class="tool-card" data-category="image">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/10095/10095393.png" alt="Midjourney">
@@ -74,11 +74,11 @@
                 <p>Generates high-quality art, photorealistic images, and graphics using simple text prompts.</p>
                 <div class="card-footer">
                     <span class="category-tag">Image</span>
-                    <a href="https://midjourney.com" target="_blank" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://midjourney.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
-            <!-- Tool 3 -->
+            <!-- Tool 3: GitHub Copilot -->
             <div class="tool-card" data-category="coding">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="GitHub Copilot">
@@ -90,69 +90,11 @@
                 <p>AI pair programmer that auto-completes code, writes functions, and speeds up software development.</p>
                 <div class="card-footer">
                     <span class="category-tag">Coding</span>
-                    <a href="https://github.com/features/copilot" target="_blank" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/features/copilot" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
-            <!-- Tool 4 -->
+            <!-- Tool 4: Runway Gen-2 -->
             <div class="tool-card" data-category="video">
                 <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="RunwayML">
-                    <div>
-                        <h3>Runway Gen-2</h3>
-                        <span class="badge freemium">Freemium</span>
-                    </div>
-                </div>
-                <p>Generate realistic videos from text descriptions or transform existing video clips instantly.</p>
-                <div class="card-footer">
-                    <span class="category-tag">Video</span>
-                    <a href="https://runwayml.com" target="_blank" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 AIToolsHub. Built on GitHub Pages.</p>
-    </footer>
-
-    <!-- JavaScript for Live Search & Filter -->
-    <script>
-        function filterTools() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.getElementsByClassName('tool-card');
-
-            for (let i = 0; i < cards.length; i++) {
-                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-
-                if (title.includes(input) || desc.includes(input)) {
-                    cards[i].style.display = "flex";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-
-        function filterCategory(category) {
-            let cards = document.getElementsByClassName('tool-card');
-            let buttons = document.getElementsByClassName('cat-btn');
-
-            for (let btn of buttons) {
-                btn.classList.remove('active');
-            }
-            event.target.classList.add('active');
-
-            for (let i = 0; i < cards.length; i++) {
-                if (category === 'all' || cards[i].getAttribute('data-category') === category) {
-                    cards[i].style.display = "flex";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+                    <img src="
