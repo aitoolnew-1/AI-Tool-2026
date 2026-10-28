@@ -477,7 +477,7 @@
         <!-- Search Bar -->
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Sora, Runway)..." onkeyup="filterTools()">
+            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Claude, Sora, Suno)..." onkeyup="filterTools()">
         </div>
     </section>
 
@@ -520,9 +520,10 @@
     <!-- Categories Filter -->
     <div class="categories">
         <button class="cat-btn active" onclick="filterCategory('all')">All</button>
-        <button class="cat-btn" onclick="filterCategory('writing')">Writing & Copy</button>
+        <button class="cat-btn" onclick="filterCategory('writing')">Writing & Research</button>
         <button class="cat-btn" onclick="filterCategory('image')">Image & Art</button>
         <button class="cat-btn" onclick="filterCategory('video')">Video & Animation</button>
+        <button class="cat-btn" onclick="filterCategory('audio')">Audio & Voice</button>
         <button class="cat-btn" onclick="filterCategory('coding')">Coding & Dev</button>
     </div>
 
@@ -546,7 +547,23 @@
                 </div>
             </div>
 
-            <!-- Tool 2: Google Gemini -->
+            <!-- Tool 2: Claude AI -->
+            <div class="tool-card" data-category="writing">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="Claude AI">
+                    <div>
+                        <h3>Claude AI</h3>
+                        <span class="badge free">Free / Paid</span>
+                    </div>
+                </div>
+                <p>Advanced AI model for nuanced writing, complex reasoning, coding, and long-document analysis.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Writing</span>
+                    <a href="https://claude.ai" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 3: Google Gemini -->
             <div class="tool-card" data-category="writing">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/6134/6134346.png" alt="Google Gemini">
@@ -562,7 +579,23 @@
                 </div>
             </div>
 
-            <!-- Tool 3: Midjourney -->
+            <!-- Tool 4: Perplexity AI -->
+            <div class="tool-card" data-category="writing">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6134/6134346.png" alt="Perplexity AI">
+                    <div>
+                        <h3>Perplexity AI</h3>
+                        <span class="badge free">Free / Paid</span>
+                    </div>
+                </div>
+                <p>AI-powered answer engine that delivers accurate, real-time web research with verified source citations.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Research</span>
+                    <a href="https://perplexity.ai" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 5: Midjourney -->
             <div class="tool-card" data-category="image">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/10095/10095393.png" alt="Midjourney">
@@ -578,7 +611,23 @@
                 </div>
             </div>
 
-            <!-- Tool 4: OpenAI Sora -->
+            <!-- Tool 6: Leonardo.ai -->
+            <div class="tool-card" data-category="image">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10095/10095393.png" alt="Leonardo.ai">
+                    <div>
+                        <h3>Leonardo.ai</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>Create high-quality game assets, production-ready art, and photorealistic visual content seamlessly.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Image</span>
+                    <a href="https://leonardo.ai" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 7: OpenAI Sora -->
             <div class="tool-card" data-category="video">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="OpenAI Sora">
@@ -594,7 +643,7 @@
                 </div>
             </div>
 
-            <!-- Tool 5: Runway Gen-3 -->
+            <!-- Tool 8: Runway Gen-3 -->
             <div class="tool-card" data-category="video">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="Runway Gen-3">
@@ -610,7 +659,7 @@
                 </div>
             </div>
 
-            <!-- Tool 6: Luma Dream Machine -->
+            <!-- Tool 9: Luma Dream Machine -->
             <div class="tool-card" data-category="video">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Luma Dream Machine">
@@ -626,23 +675,39 @@
                 </div>
             </div>
 
-            <!-- Tool 7: Pika AI -->
-            <div class="tool-card" data-category="video">
+            <!-- Tool 10: ElevenLabs -->
+            <div class="tool-card" data-category="audio">
                 <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/408/408703.png" alt="Pika Labs">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="ElevenLabs">
                     <div>
-                        <h3>Pika AI</h3>
+                        <h3>ElevenLabs</h3>
                         <span class="badge freemium">Freemium</span>
                     </div>
                 </div>
-                <p>An easy-to-use platform to animate static images, control camera movements, and generate videos.</p>
+                <p>Ultra-realistic AI voice generator and text-to-speech tool for YouTube, podcasts, and video dubbing.</p>
                 <div class="card-footer">
-                    <span class="category-tag">Video</span>
-                    <a href="https://pika.art" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <span class="category-tag">Audio</span>
+                    <a href="https://elevenlabs.io" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
-            <!-- Tool 8: GitHub Copilot -->
+            <!-- Tool 11: Suno AI -->
+            <div class="tool-card" data-category="audio">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/408/408703.png" alt="Suno AI">
+                    <div>
+                        <h3>Suno AI</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>Generate full songs with vocals, instrumentals, and lyrics from simple text prompts in seconds.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Audio</span>
+                    <a href="https://suno.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 12: GitHub Copilot -->
             <div class="tool-card" data-category="coding">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="GitHub Copilot">
@@ -669,7 +734,7 @@
 
                 <div class="prompt-card">
                     <div class="prompt-header">
-                        <span class="prompt-badge chatgpt">ChatGPT / Gemini</span>
+                        <span class="prompt-badge chatgpt">ChatGPT / Gemini / Claude</span>
                         <button class="copy-btn" onclick="copyPrompt('prompt1', this)"><i class="fa-regular fa-copy"></i> Copy</button>
                     </div>
                     <p class="prompt-text" id="prompt1">Act as a Senior SEO Specialist. Create a 30-day content calendar for a website about AI tools. Include blog titles, target keywords, and content intent for each day.</p>
