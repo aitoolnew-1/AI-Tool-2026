@@ -410,7 +410,7 @@
         <!-- Search Bar -->
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Gemini, Midjourney)..." onkeyup="filterTools()">
+            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Sora, Runway)..." onkeyup="filterTools()">
         </div>
     </section>
 
@@ -419,8 +419,8 @@
         <button class="cat-btn active" onclick="filterCategory('all')">All</button>
         <button class="cat-btn" onclick="filterCategory('writing')">Writing & Copy</button>
         <button class="cat-btn" onclick="filterCategory('image')">Image & Art</button>
+        <button class="cat-btn" onclick="filterCategory('video')">Video & Animation</button>
         <button class="cat-btn" onclick="filterCategory('coding')">Coding & Dev</button>
-        <button class="cat-btn" onclick="filterCategory('video')">Video & Audio</button>
     </div>
 
     <!-- AI Tools Grid -->
@@ -475,7 +475,71 @@
                 </div>
             </div>
 
-            <!-- Tool 4: GitHub Copilot -->
+            <!-- Tool 4: OpenAI Sora (Text-to-Video) -->
+            <div class="tool-card" data-category="video">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="OpenAI Sora">
+                    <div>
+                        <h3>OpenAI Sora</h3>
+                        <span class="badge paid">Paid</span>
+                    </div>
+                </div>
+                <p>Groundbreaking text-to-video AI model that creates cinematic, highly detailed video scenes from text.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Video</span>
+                    <a href="https://openai.com/sora" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 5: Runway Gen-3 (Text-to-Video & Image-to-Video) -->
+            <div class="tool-card" data-category="video">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="Runway Gen-3">
+                    <div>
+                        <h3>Runway Gen-3 Alpha</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>Industry-leading text-to-video and image-to-video platform for hyper-realistic visual generation.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Video</span>
+                    <a href="https://runwayml.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 6: Luma Dream Machine (Image-to-Video) -->
+            <div class="tool-card" data-category="video">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Luma Dream Machine">
+                    <div>
+                        <h3>Luma Dream Machine</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>Turn images and text prompts into breathtaking, high-quality cinematic videos smoothly.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Video</span>
+                    <a href="https://lumalabs.ai/dream-machine" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 7: Pika Labs (Image-to-Video) -->
+            <div class="tool-card" data-category="video">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/408/408703.png" alt="Pika Labs">
+                    <div>
+                        <h3>Pika AI</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>An easy-to-use platform to animate static images, control camera movements, and generate videos.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Video</span>
+                    <a href="https://pika.art" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 8: GitHub Copilot -->
             <div class="tool-card" data-category="coding">
                 <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="GitHub Copilot">
@@ -491,28 +555,12 @@
                 </div>
             </div>
 
-            <!-- Tool 5: Runway Gen-2 -->
-            <div class="tool-card" data-category="video">
-                <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="RunwayML">
-                    <div>
-                        <h3>Runway Gen-2</h3>
-                        <span class="badge freemium">Freemium</span>
-                    </div>
-                </div>
-                <p>Generate realistic videos from text descriptions or transform existing video clips instantly.</p>
-                <div class="card-footer">
-                    <span class="category-tag">Video</span>
-                    <a href="https://runwayml.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
         </div>
 
         <!-- AI Prompts Section -->
         <section class="prompts-section" id="prompts">
             <h3 class="section-title"><i class="fa-solid fa-wand-magic-sparkles" style="color: #38bdf8;"></i> Trending AI Prompts</h3>
-            <p style="color: #94a3b8; margin-bottom: 20px;">Copy these proven prompts for ChatGPT, Google Gemini & Midjourney.</p>
+            <p style="color: #94a3b8; margin-bottom: 20px;">Copy these proven prompts for ChatGPT, Sora & Runway video generation.</p>
 
             <div class="prompts-grid">
 
@@ -526,10 +574,10 @@
 
                 <div class="prompt-card">
                     <div class="prompt-header">
-                        <span class="prompt-badge midjourney">Midjourney</span>
+                        <span class="prompt-badge midjourney">Sora / Runway Video</span>
                         <button class="copy-btn" onclick="copyPrompt('prompt2', this)"><i class="fa-regular fa-copy"></i> Copy</button>
                     </div>
-                    <p class="prompt-text" id="prompt2">Hyper-realistic futuristic workspace with holographic AI displays, modern lighting, 8k resolution, cinematic atmosphere, octane render --ar 16:9 --v 6.0</p>
+                    <p class="prompt-text" id="prompt2">Cinematic drone shot flying over a futuristic neon-lit cyberpunk city at night, flying cars zooming past, rainy atmosphere, hyper-realistic, 4k resolution.</p>
                 </div>
 
                 <div class="prompt-card">
@@ -597,4 +645,51 @@
             let input = document.getElementById('searchInput').value.toLowerCase();
             let cards = document.getElementsByClassName('tool-card');
 
-            for (
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function filterCategory(category) {
+            let cards = document.getElementsByClassName('tool-card');
+            let buttons = document.getElementsByClassName('cat-btn');
+
+            for (let btn of buttons) {
+                btn.classList.remove('active');
+            }
+            event.target.classList.add('active');
+
+            for (let i = 0; i < cards.length; i++) {
+                if (category === 'all' || cards[i].getAttribute('data-category') === category) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function copyPrompt(elementId, btn) {
+            let textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                let originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                btn.style.background = '#22c55e';
+                btn.style.color = '#ffffff';
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '#334155';
+                    btn.style.color = '#38bdf8';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
