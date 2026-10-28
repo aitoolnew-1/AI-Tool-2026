@@ -1,36 +1,426 @@
-<!-- AI Prompts Section -->
-<section class="prompts-section" id="prompts">
-    <h3 class="section-title"><i class="fa-solid fa-wand-magic-sparkles" style="color: #38bdf8;"></i> Trending AI Prompts</h3>
-    <p style="color: #94a3b8; margin-bottom: 25px;">Copy these proven prompts for ChatGPT, Google Gemini & Midjourney.</p>
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIToolsHub - Top AI Tools, Prompts & Video Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Video Tutorials Section */
+        .video-section {
+            margin: 50px 0;
+            padding: 30px;
+            background: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
 
-    <div class="prompts-grid">
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        <!-- Prompt Card 1 -->
-        <div class="prompt-card">
-            <div class="prompt-header">
-                <span class="prompt-badge chatgpt">ChatGPT / Gemini</span>
-                <button class="copy-btn" onclick="copyPrompt('prompt1', this)"><i class="fa-regular fa-copy"></i> Copy</button>
-            </div>
-            <p class="prompt-text" id="prompt1">Act as a Senior SEO Specialist. Create a 30-day content calendar for a website about AI tools. Include blog titles, target keywords, and content intent for each day.</p>
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background: #0f172a;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h4 {
+            font-size: 16px;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* AI Prompts Section Styling */
+        .prompts-section {
+            margin: 50px 0;
+            padding: 30px;
+            background: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .prompt-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .prompt-badge {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .chatgpt { background: #10a37f; color: #fff; }
+        .midjourney { background: #6366f1; color: #fff; }
+        .coding { background: #f59e0b; color: #fff; }
+
+        .copy-btn {
+            background: #334155;
+            color: #38bdf8;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .prompt-text {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.6;
+            background: #1e293b;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #38bdf8;
+        }
+
+        /* Instagram & Social */
+        .insta-btn {
+            color: #e1306c !important;
+            font-weight: bold;
+        }
+        
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #e1306c;
+            font-size: 22px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-robot"></i> <span>AIToolsHub</span>
         </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#tools">All Tools</a>
+            <a href="#prompts">Prompts</a>
+            <a href="#tutorials">Tutorials</a>
+            <a href="https://instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank" class="insta-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="submit.html" class="submit-btn">+ Submit AI Tool</a>
+        </nav>
+    </header>
 
-        <!-- Prompt Card 2 -->
-        <div class="prompt-card">
-            <div class="prompt-header">
-                <span class="prompt-badge midjourney">Midjourney</span>
-                <button class="copy-btn" onclick="copyPrompt('prompt2', this)"><i class="fa-regular fa-copy"></i> Copy</button>
-            </div>
-            <p class="prompt-text" id="prompt2">Hyper-realistic futuristic workspace with holographic AI displays, modern lighting, 8k resolution, cinematic atmosphere, octane render --ar 16:9 --v 6.0</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Best <span class="highlight">AI Tools & Prompts</span></h1>
+        <p>Explore top-rated AI tools, copy expert prompts, and watch video guides.</p>
+        
+        <!-- Search Bar -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Gemini, Midjourney)..." onkeyup="filterTools()">
         </div>
+    </section>
 
-        <!-- Prompt Card 3 -->
-        <div class="prompt-card">
-            <div class="prompt-header">
-                <span class="prompt-badge coding">Coding Prompt</span>
-                <button class="copy-btn" onclick="copyPrompt('prompt3', this)"><i class="fa-regular fa-copy"></i> Copy</button>
-            </div>
-            <p class="prompt-text" id="prompt3">Write a clean JavaScript function that takes a JSON array of products and sorts them by price in ascending order. Add error handling for empty or invalid inputs.</p>
-        </div>
-
+    <!-- Categories Filter -->
+    <div class="categories">
+        <button class="cat-btn active" onclick="filterCategory('all')">All</button>
+        <button class="cat-btn" onclick="filterCategory('writing')">Writing & Copy</button>
+        <button class="cat-btn" onclick="filterCategory('image')">Image & Art</button>
+        <button class="cat-btn" onclick="filterCategory('coding')">Coding & Dev</button>
+        <button class="cat-btn" onclick="filterCategory('video')">Video & Audio</button>
     </div>
-</section>
+
+    <!-- AI Tools Grid -->
+    <main class="container" id="tools">
+        <div class="tools-grid" id="toolsGrid">
+
+            <!-- Tool 1: ChatGPT -->
+            <div class="tool-card" data-category="writing">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/12222/12222560.png" alt="ChatGPT">
+                    <div>
+                        <h3>ChatGPT</h3>
+                        <span class="badge free">Free / Paid</span>
+                    </div>
+                </div>
+                <p>Advanced AI chatbot for writing content, answering complex questions, and coding assistance.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Writing</span>
+                    <a href="https://chatgpt.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 2: Google Gemini -->
+            <div class="tool-card" data-category="writing">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6134/6134346.png" alt="Google Gemini">
+                    <div>
+                        <h3>Google Gemini</h3>
+                        <span class="badge free">Free / Paid</span>
+                    </div>
+                </div>
+                <p>Google's powerful multimodal AI assistant for reasoning, coding, brainstorming, and real-time data analysis.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Writing</span>
+                    <a href="https://gemini.google.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 3: Midjourney -->
+            <div class="tool-card" data-category="image">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10095/10095393.png" alt="Midjourney">
+                    <div>
+                        <h3>Midjourney</h3>
+                        <span class="badge paid">Paid</span>
+                    </div>
+                </div>
+                <p>Generates high-quality art, photorealistic images, and graphics using simple text prompts.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Image</span>
+                    <a href="https://midjourney.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 4: GitHub Copilot -->
+            <div class="tool-card" data-category="coding">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="GitHub Copilot">
+                    <div>
+                        <h3>GitHub Copilot</h3>
+                        <span class="badge paid">Paid</span>
+                    </div>
+                </div>
+                <p>AI pair programmer that auto-completes code, writes functions, and speeds up software development.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Coding</span>
+                    <a href="https://github.com/features/copilot" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 5: Runway Gen-2 -->
+            <div class="tool-card" data-category="video">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="RunwayML">
+                    <div>
+                        <h3>Runway Gen-2</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>Generate realistic videos from text descriptions or transform existing video clips instantly.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Video</span>
+                    <a href="https://runwayml.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- AI Prompts Section -->
+        <section class="prompts-section" id="prompts">
+            <h3 class="section-title"><i class="fa-solid fa-wand-magic-sparkles" style="color: #38bdf8;"></i> Trending AI Prompts</h3>
+            <p style="color: #94a3b8; margin-bottom: 25px;">Copy these proven prompts for ChatGPT, Google Gemini & Midjourney.</p>
+
+            <div class="prompts-grid">
+
+                <!-- Prompt Card 1 -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <span class="prompt-badge chatgpt">ChatGPT / Gemini</span>
+                        <button class="copy-btn" onclick="copyPrompt('prompt1', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <p class="prompt-text" id="prompt1">Act as a Senior SEO Specialist. Create a 30-day content calendar for a website about AI tools. Include blog titles, target keywords, and content intent for each day.</p>
+                </div>
+
+                <!-- Prompt Card 2 -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <span class="prompt-badge midjourney">Midjourney</span>
+                        <button class="copy-btn" onclick="copyPrompt('prompt2', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <p class="prompt-text" id="prompt2">Hyper-realistic futuristic workspace with holographic AI displays, modern lighting, 8k resolution, cinematic atmosphere, octane render --ar 16:9 --v 6.0</p>
+                </div>
+
+                <!-- Prompt Card 3 -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <span class="prompt-badge coding">Coding Prompt</span>
+                        <button class="copy-btn" onclick="copyPrompt('prompt3', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <p class="prompt-text" id="prompt3">Write a clean JavaScript function that takes a JSON array of products and sorts them by price in ascending order. Add error handling for empty or invalid inputs.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- YouTube Video Tutorials Section -->
+        <section class="video-section" id="tutorials">
+            <h3 class="section-title"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> Featured AI Video Tutorials</h3>
+            <div class="video-grid">
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jC4v5AS4RIM" title="AI Tools Tutorial" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>How to Use Top AI Tools (Full Guide)</h4>
+                        <p>Learn how to use AI tools efficiently to double your productivity.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2m9O-xO8H5M" title="Google Gemini Tutorial" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Google Gemini Complete Tutorial</h4>
+                        <p>Master Google Gemini's features and prompt techniques.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/yT18zZ88_20" title="Midjourney AI Art Guide" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Midjourney Prompt Engineering</h4>
+                        <p>Create stunning AI art and photorealistic images with Midjourney.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AIToolsHub. Built on GitHub Pages.</p>
+        <div class="social-links">
+            <a href="https://instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Live Search, Filter & Copy Prompt -->
+    <script>
+        function filterTools() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('tool-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function filterCategory(category) {
+            let cards = document.getElementsByClassName('tool-card');
+            let buttons = document.getElementsByClassName('cat-btn');
+
+            for (let btn of buttons) {
+                btn.classList.remove('active');
+            }
+            event.target.classList.add('active');
+
+            for (let i = 0; i < cards.length; i++) {
+                if (category === 'all' || cards[i].getAttribute('data-category') === category) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function copyPrompt(elementId, btn) {
+            let textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                let originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                btn.style.background = '#22c55e';
+                btn.style.color = '#ffffff';
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '#334155';
+                    btn.style.color = '#38bdf8';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
