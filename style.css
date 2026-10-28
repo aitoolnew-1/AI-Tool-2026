@@ -10,6 +10,7 @@ body {
     color: #f8fafc;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -29,8 +30,26 @@ nav a {
     color: #94a3b8;
     text-decoration: none;
     margin-left: 20px;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    color: #ffffff;
+}
+
+.submit-btn {
+    background: #6366f1;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.insta-btn {
+    color: #e1306c !important;
+    font-weight: bold;
+}
+
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -38,8 +57,19 @@ nav a {
     margin: 0 auto;
 }
 
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
 .highlight {
     color: #38bdf8;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .search-box {
@@ -50,7 +80,7 @@ nav a {
     display: flex;
     align-items: center;
     max-width: 500px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 .search-box input {
@@ -63,6 +93,7 @@ nav a {
     font-size: 16px;
 }
 
+/* Categories */
 .categories {
     display: flex;
     justify-content: center;
@@ -78,14 +109,16 @@ nav a {
     padding: 8px 18px;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.cat-btn.active {
+.cat-btn:hover, .cat-btn.active {
     background: #38bdf8;
     color: #0f172a;
     font-weight: bold;
 }
 
+/* Cards Grid */
 .container {
     padding: 0 8% 60px 8%;
 }
@@ -104,6 +137,12 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
 }
 
 .card-header {
@@ -113,7 +152,6 @@ nav a {
     margin-bottom: 15px;
 }
 
-/* ਬਹੁਤ ਜ਼ਰੂਰੀ: ਲੋਗੋ ਦਾ ਸਾਈਜ਼ ਠੀਕ ਕਰਨ ਲਈ */
 .card-header img {
     width: 45px !important;
     height: 45px !important;
@@ -145,6 +183,14 @@ nav a {
     align-items: center;
 }
 
+.category-tag {
+    font-size: 12px;
+    color: #64748b;
+    background: #0f172a;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
 .visit-btn {
     color: #38bdf8;
     text-decoration: none;
@@ -152,11 +198,135 @@ nav a {
     font-size: 14px;
 }
 
+.visit-btn:hover {
+    text-decoration: underline;
+}
+
+/* Video Tutorials Section */
+.video-section, .prompts-section {
+    margin: 50px 0;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+.section-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-grid, .prompts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-card, .prompt-card {
+    background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #334155;
+    padding: 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-info {
+    padding-top: 15px;
+}
+
+.video-info h4 {
+    font-size: 16px;
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+
+.video-info p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* Prompts Styling */
+.prompt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.prompt-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.chatgpt { background: #10a37f; color: #fff; }
+.midjourney { background: #6366f1; color: #fff; }
+.coding { background: #f59e0b; color: #fff; }
+
+.copy-btn {
+    background: #334155;
+    color: #38bdf8;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.prompt-text {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 3px solid #38bdf8;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background: #1e293b;
     border-top: 1px solid #334155;
     color: #64748b;
-    margin-top: 50px;
+    margin-top: 40px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #e1306c;
+    font-size: 22px;
+    margin: 0 10px;
 }
