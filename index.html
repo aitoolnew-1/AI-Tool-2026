@@ -3,163 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top AI Tools Directory | Find Best AI Tools</title>
+    <title>AIToolsHub - Top AI Tools & Video Tutorials</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <i class="fa-solid fa-robot"></i> <span>AIToolsHub</span>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#tools">All Tools</a>
-            <a href="submit.html" class="submit-btn">+ Submit AI Tool</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Discover the Best <span class="highlight">AI Tools</span> for Your Work</h1>
-        <p>Explore top-rated AI tools to boost your productivity and workflow.</p>
-        
-        <!-- Search Bar -->
-        <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Gemini, Midjourney)..." onkeyup="filterTools()">
-        </div>
-    </section>
-
-    <!-- Categories Filter -->
-    <div class="categories">
-        <button class="cat-btn active" onclick="filterCategory('all')">All</button>
-        <button class="cat-btn" onclick="filterCategory('writing')">Writing & Copy</button>
-        <button class="cat-btn" onclick="filterCategory('image')">Image & Art</button>
-        <button class="cat-btn" onclick="filterCategory('coding')">Coding & Dev</button>
-        <button class="cat-btn" onclick="filterCategory('video')">Video & Audio</button>
-    </div>
-
-    <!-- AI Tools Grid -->
-    <main class="container" id="tools">
-        <div class="tools-grid" id="toolsGrid">
-
-            <!-- Tool 1: ChatGPT -->
-            <div class="tool-card" data-category="writing">
-                <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/12222/12222560.png" alt="ChatGPT">
-                    <div>
-                        <h3>ChatGPT</h3>
-                        <span class="badge free">Free / Paid</span>
-                    </div>
-                </div>
-                <p>Advanced AI chatbot for writing content, answering complex questions, and coding assistance.</p>
-                <div class="card-footer">
-                    <span class="category-tag">Writing</span>
-                    <a href="https://chatgpt.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-            <!-- Tool 2: Google Gemini (ਨਵਾਂ ਜੋੜਿਆ ਗਿਆ) -->
-            <div class="tool-card" data-category="writing">
-                <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/6134/6134346.png" alt="Google Gemini">
-                    <div>
-                        <h3>Google Gemini</h3>
-                        <span class="badge free">Free / Paid</span>
-                    </div>
-                </div>
-                <p>Google's powerful multimodal AI assistant for reasoning, coding, brainstorming, and real-time data analysis.</p>
-                <div class="card-footer">
-                    <span class="category-tag">Writing</span>
-                    <a href="https://gemini.google.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-            <!-- Tool 3: Midjourney -->
-            <div class="tool-card" data-category="image">
-                <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/10095/10095393.png" alt="Midjourney">
-                    <div>
-                        <h3>Midjourney</h3>
-                        <span class="badge paid">Paid</span>
-                    </div>
-                </div>
-                <p>Generates high-quality art, photorealistic images, and graphics using simple text prompts.</p>
-                <div class="card-footer">
-                    <span class="category-tag">Image</span>
-                    <a href="https://midjourney.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-            <!-- Tool 4: GitHub Copilot -->
-            <div class="tool-card" data-category="coding">
-                <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="GitHub Copilot">
-                    <div>
-                        <h3>GitHub Copilot</h3>
-                        <span class="badge paid">Paid</span>
-                    </div>
-                </div>
-                <p>AI pair programmer that auto-completes code, writes functions, and speeds up software development.</p>
-                <div class="card-footer">
-                    <span class="category-tag">Coding</span>
-                    <a href="https://github.com/features/copilot" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-            <!-- Tool 5: Runway Gen-2 -->
-            <div class="tool-card" data-category="video">
-                <div class="card-header">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="RunwayML">
-                    <div>
-                        <h3>Runway Gen-2</h3>
-                        <span class="badge freemium">Freemium</span>
-                    </div>
-                </div>
-                <p>Generate realistic videos from text descriptions or transform existing video clips instantly.</p>
-                <div class="card-footer">
-                    <span class="category-tag">Video</span>
-                    <a href="https://runwayml.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 AIToolsHub. Built on GitHub Pages.</p>
-    </footer>
-
-    <!-- JavaScript for Live Search & Filter -->
-    <script>
-        function filterTools() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.getElementsByClassName('tool-card');
-
-            for (let i = 0; i < cards.length; i++) {
-                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-
-                if (title.includes(input) || desc.includes(input)) {
-                    cards[i].style.display = "flex";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
+    <style>
+        /* Video Tutorials Section Styling */
+        .video-section {
+            margin: 50px 0;
+            padding: 30px;
+            background: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #334155;
         }
 
-        function filterCategory(category) {
-            let cards = document.getElementsByClassName('tool-card');
-            let buttons = document.getElementsByClassName('cat-btn');
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-            for (let btn of buttons) {
-                btn.classList.remove('active');
-            }
-            event.target.classList.add('active');
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
 
-            for (let i = 0; i < cards.length; i++) {
-                if (category === 'all' || cards[i].getAttribute('data-category')
+        .video-card {
+            background: #0f172a;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
