@@ -363,6 +363,7 @@
         .chatgpt { background: #10a37f; color: #fff; }
         .midjourney { background: #6366f1; color: #fff; }
         .coding { background: #f59e0b; color: #fff; }
+        .marketing { background: #ec4899; color: #fff; }
 
         .copy-btn {
             background: #334155;
@@ -728,32 +729,62 @@
         <!-- AI Prompts Section -->
         <section class="prompts-section" id="prompts">
             <h3 class="section-title"><i class="fa-solid fa-wand-magic-sparkles" style="color: #38bdf8;"></i> Trending AI Prompts</h3>
-            <p style="color: #94a3b8; margin-bottom: 20px;">Copy these proven prompts for ChatGPT, Sora & Runway video generation.</p>
+            <p style="color: #94a3b8; margin-bottom: 20px;">Copy these proven expert prompts for ChatGPT, Gemini, Midjourney, Sora & Coding.</p>
 
             <div class="prompts-grid">
 
+                <!-- Prompt 1: SEO Content Calendar -->
                 <div class="prompt-card">
                     <div class="prompt-header">
-                        <span class="prompt-badge chatgpt">ChatGPT / Gemini / Claude</span>
+                        <span class="prompt-badge chatgpt">ChatGPT / Gemini</span>
                         <button class="copy-btn" onclick="copyPrompt('prompt1', this)"><i class="fa-regular fa-copy"></i> Copy</button>
                     </div>
-                    <p class="prompt-text" id="prompt1">Act as a Senior SEO Specialist. Create a 30-day content calendar for a website about AI tools. Include blog titles, target keywords, and content intent for each day.</p>
+                    <p class="prompt-text" id="prompt1">Act as a Senior SEO Specialist. Create a 30-day content calendar for a website about AI tools. Include blog titles, target keywords, search intent, and estimated monthly search volume strategy for each day.</p>
                 </div>
 
+                <!-- Prompt 2: Cyberpunk Video Generation -->
                 <div class="prompt-card">
                     <div class="prompt-header">
                         <span class="prompt-badge midjourney">Sora / Runway Video</span>
                         <button class="copy-btn" onclick="copyPrompt('prompt2', this)"><i class="fa-regular fa-copy"></i> Copy</button>
                     </div>
-                    <p class="prompt-text" id="prompt2">Cinematic drone shot flying over a futuristic neon-lit cyberpunk city at night, flying cars zooming past, rainy atmosphere, hyper-realistic, 4k resolution.</p>
+                    <p class="prompt-text" id="prompt2">Cinematic drone camera shot flying through a futuristic neon-lit cyberpunk city at night, flying vehicles zooming past high-rise skyscrapers, wet reflective streets, rainy atmosphere, hyper-detailed 4k resolution, 60fps cinematic lighting.</p>
                 </div>
 
+                <!-- Prompt 3: JavaScript Array Sorting -->
                 <div class="prompt-card">
                     <div class="prompt-header">
                         <span class="prompt-badge coding">Coding Prompt</span>
                         <button class="copy-btn" onclick="copyPrompt('prompt3', this)"><i class="fa-regular fa-copy"></i> Copy</button>
                     </div>
-                    <p class="prompt-text" id="prompt3">Write a clean JavaScript function that takes a JSON array of products and sorts them by price in ascending order. Add error handling for empty or invalid inputs.</p>
+                    <p class="prompt-text" id="prompt3">Write a clean JavaScript function that takes a JSON array of products and sorts them by price in ascending order. Include error handling for empty array or invalid schema inputs, and add inline JSDoc comments.</p>
+                </div>
+
+                <!-- Prompt 4: Midjourney Logo Generator -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <span class="prompt-badge midjourney">Midjourney / Leonardo</span>
+                        <button class="copy-btn" onclick="copyPrompt('prompt4', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <p class="prompt-text" id="prompt4">Minimalist modern tech logo featuring a futuristic robot brain with gradient glowing cyan and purple lines, clean dark background, vector style, graphic design, flat icon, high quality --ar 1:1 --v 6.0</p>
+                </div>
+
+                <!-- Prompt 5: Social Media Copywriting -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <span class="prompt-badge marketing">Marketing & Copy</span>
+                        <button class="copy-btn" onclick="copyPrompt('prompt5', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <p class="prompt-text" id="prompt5">Write a high-converting Instagram caption and LinkedIn post announcing a new AI website launching. Include a strong hook line, 3 key benefits using bullet points, relevant trending hashtags, and a clear call to action to visit the link in bio.</p>
+                </div>
+
+                <!-- Prompt 6: Python Web Scraper -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <span class="prompt-badge coding">Python Dev</span>
+                        <button class="copy-btn" onclick="copyPrompt('prompt6', this)"><i class="fa-regular fa-copy"></i> Copy</button>
+                    </div>
+                    <p class="prompt-text" id="prompt6">Create a Python script using BeautifulSoup and Requests to extract product names, prices, and ratings from an e-commerce page. Save the scraped output directly into a formatted CSV file with exception handling.</p>
                 </div>
 
             </div>
