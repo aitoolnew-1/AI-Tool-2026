@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Video Tutorials Section Styling */
         .video-section {
             margin: 50px 0;
             padding: 30px;
@@ -40,5 +39,264 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h4 {
+            font-size: 16px;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* Instagram Social Button Style */
+        .insta-btn {
+            color: #e1306c !important;
+            font-weight: bold;
+        }
+        
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #e1306c;
+            font-size: 22px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-robot"></i> <span>AIToolsHub</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#tools">All Tools</a>
+            <a href="#tutorials">Tutorials</a>
+            <!-- Replace 'YOUR_INSTAGRAM_USERNAME' with your actual Instagram ID -->
+            <a href="https://instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank" class="insta-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="submit.html" class="submit-btn">+ Submit AI Tool</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Best <span class="highlight">AI Tools & Tutorials</span></h1>
+        <p>Explore top-rated AI tools and watch video guides to boost your productivity.</p>
+        
+        <!-- Search Bar -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search AI tools (e.g. ChatGPT, Gemini, Midjourney)..." onkeyup="filterTools()">
+        </div>
+    </section>
+
+    <!-- Categories Filter -->
+    <div class="categories">
+        <button class="cat-btn active" onclick="filterCategory('all')">All</button>
+        <button class="cat-btn" onclick="filterCategory('writing')">Writing & Copy</button>
+        <button class="cat-btn" onclick="filterCategory('image')">Image & Art</button>
+        <button class="cat-btn" onclick="filterCategory('coding')">Coding & Dev</button>
+        <button class="cat-btn" onclick="filterCategory('video')">Video & Audio</button>
+    </div>
+
+    <!-- AI Tools Grid -->
+    <main class="container" id="tools">
+        <div class="tools-grid" id="toolsGrid">
+
+            <!-- Tool 1: ChatGPT -->
+            <div class="tool-card" data-category="writing">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/12222/12222560.png" alt="ChatGPT">
+                    <div>
+                        <h3>ChatGPT</h3>
+                        <span class="badge free">Free / Paid</span>
+                    </div>
+                </div>
+                <p>Advanced AI chatbot for writing content, answering complex questions, and coding assistance.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Writing</span>
+                    <a href="https://chatgpt.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 2: Google Gemini -->
+            <div class="tool-card" data-category="writing">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6134/6134346.png" alt="Google Gemini">
+                    <div>
+                        <h3>Google Gemini</h3>
+                        <span class="badge free">Free / Paid</span>
+                    </div>
+                </div>
+                <p>Google's powerful multimodal AI assistant for reasoning, coding, brainstorming, and real-time data analysis.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Writing</span>
+                    <a href="https://gemini.google.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 3: Midjourney -->
+            <div class="tool-card" data-category="image">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10095/10095393.png" alt="Midjourney">
+                    <div>
+                        <h3>Midjourney</h3>
+                        <span class="badge paid">Paid</span>
+                    </div>
+                </div>
+                <p>Generates high-quality art, photorealistic images, and graphics using simple text prompts.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Image</span>
+                    <a href="https://midjourney.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 4: GitHub Copilot -->
+            <div class="tool-card" data-category="coding">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="GitHub Copilot">
+                    <div>
+                        <h3>GitHub Copilot</h3>
+                        <span class="badge paid">Paid</span>
+                    </div>
+                </div>
+                <p>AI pair programmer that auto-completes code, writes functions, and speeds up software development.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Coding</span>
+                    <a href="https://github.com/features/copilot" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Tool 5: Runway Gen-2 -->
+            <div class="tool-card" data-category="video">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png" alt="RunwayML">
+                    <div>
+                        <h3>Runway Gen-2</h3>
+                        <span class="badge freemium">Freemium</span>
+                    </div>
+                </div>
+                <p>Generate realistic videos from text descriptions or transform existing video clips instantly.</p>
+                <div class="card-footer">
+                    <span class="category-tag">Video</span>
+                    <a href="https://runwayml.com" target="_blank" rel="nofollow" class="visit-btn">Try Tool <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- YouTube Video Tutorials Section -->
+        <section class="video-section" id="tutorials">
+            <h3 class="section-title"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> Featured AI Video Tutorials</h3>
+            <div class="video-grid">
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jC4v5AS4RIM" title="AI Tools Tutorial" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>How to Use Top AI Tools (Full Guide)</h4>
+                        <p>Learn how to use AI tools efficiently to double your productivity.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2m9O-xO8H5M" title="Google Gemini Tutorial" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Google Gemini Complete Tutorial</h4>
+                        <p>Master Google Gemini's features and prompt techniques.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/yT18zZ88_20" title="Midjourney AI Art Guide" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Midjourney Prompt Engineering</h4>
+                        <p>Create stunning AI art and photorealistic images with Midjourney.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AIToolsHub. Built on GitHub Pages.</p>
+        <div class="social-links">
+            <a href="https://instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Live Search & Filter -->
+    <script>
+        function filterTools() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('tool-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function filterCategory(category) {
+            let cards = document.getElementsByClassName('tool-card');
+            let buttons = document.getElementsByClassName('cat-btn');
+
+            for (let btn of buttons) {
+                btn.classList.remove('active');
+            }
+            event.target.classList.add('active');
+
+            for (let i = 0; i < cards.length; i++) {
+                if (category === 'all' || cards[i].getAttribute('data-category') === category) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
